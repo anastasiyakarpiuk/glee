@@ -3,6 +3,119 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 47px 0;
+  }
+}
 
+.menu {
+  &__list {
+    display: flex;
+    text-align: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $accent;
+    @extend %rubik-500;
+    font-size: 15px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #f5b072;
+    }
+
+    &:active {
+      color: #2e6e8f;
+    }
+
+    &:focus {
+      border-bottom: 1px solid #2e6e8f;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  position: relative;
+
+  &__link {
+    text-decoration: none;
+    font-weight: 1.3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    transition: fill 0.3s, transform 0.3s;
+
+    &--search {
+      background-color: #edf1f4;
+      padding-top: 17px;
+      margin-right: 21px;
+    }
+
+    &--heart {
+      margin-right: 58px;
+    }
+
+    &--menu {
+      background-color: #a3bbc8;
+      padding-top: 15px;
+    }
+
+    &:hover svg {
+      transform: scale(1.2);
+    }
+
+    &:active path {
+      fill: #2e6e8f;
+    }
+
+    &:focus path {
+      fill: #f5b072;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -9px;
+    right: -9px;
+    @extend %dmsans-400;
+    font-size: 10px;
+    color: $default;
+    line-height: 16px;
+  }
+
+  &__items {
+    border-radius: 27px;
+    background-color: #fcd7b6;
+    text-align: center;
+    padding: 20px 40px 13px;
+    margin-right: 18px;
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+      position: absolute;
+      left: 50%;
+      top: 9px;
+    }
+  }
+}
 
 @import 'media';
