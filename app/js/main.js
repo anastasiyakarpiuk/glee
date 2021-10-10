@@ -7,5 +7,29 @@ $(function(){
     autoplaySpeed: 2000
   });
 
-  var mixer = mixitup('.products__items');
+  var mixer1 = mixitup('.products__items');
+  // var mixer2 = mixitup('.categories__items');
+
+  // $('#Container').mixItUp({
+  //   selectors: {
+  //     filter: '.products__btn'
+  //   }
+  // });
+
+  // $('#Container2').mixItUp({
+  //   selectors: {
+  //     filter: '.categories__btn'
+  //   }
+  // });
+
+
+  //   $('.partners__inner').slick({
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: false,
+  //   // fade: true,
+  //   speed: 300,
+  //   slidesToShow: 5,
+  //   // slidesToScroll: 4,
+  // });
 });
