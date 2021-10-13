@@ -5,7 +5,7 @@ body {
 
 body {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.8;
   color: $default;
   @extend %rubik-400;
   background-color: #ffffff;
@@ -40,4 +40,11 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.title {
+  font-size: 36px;
+  @extend %dmsans-700;
+  color: $default;
+  margin-bottom: 30px;
 }
