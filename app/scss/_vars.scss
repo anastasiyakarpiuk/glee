@@ -3,6 +3,7 @@ $accent: #436372;
 $title: #191919;
 $button: #a3bbc8;
 $bg: #fcd7b6;
+$border: #f6f6f6;
 
 
 %dmsans-700 {
@@ -43,6 +44,7 @@ $bg: #fcd7b6;
   @extend %poppins-700;
   padding: 20px 20px 15px 25px;
   display: inline-block;
+  border: none;
 }
 
 

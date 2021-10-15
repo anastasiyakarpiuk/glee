@@ -1144,12 +1144,12 @@
   &__instagram,
   &__google {
     border-radius: 50%;
-    background-color: #f6f6f6;
+    background-color: $border;
     text-align: center;
   }
 
   &__instagram {
-   padding: 14px 11px 11px 14px;
+    padding: 14px 11px 11px 14px;
     margin-right: 7px;
 
   }
@@ -1157,7 +1157,82 @@
   &__google {
     padding: 12px 11px;
   }
-  
+
+}
+
+.login-partners {
+  padding-top: 75px;
+  margin-top: 0;
+}
+
+.modal {
+  max-width: 470px;
+  margin: 0 auto;
+  padding-top: 120px;
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+    color: #436372;
+    font-size: 14px;
+    line-height: 1;
+
+    &--checkbox {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    &--text {
+      display: block;
+      width: 100%;
+      margin-top: 15px;
+      height: 60px;
+      border: 2px solid $border;
+      padding: 0 15px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    @extend %btn;
+    width: 100%;
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 35px;
+    border-bottom: 2px solid $border;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1;
+    color: #436372;
+  }
+
+  &__account {
+    text-align: center;
+
+    .modal__btn {
+      background-color: #fff;
+      border: 2px solid $button;
+      color: $default;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: $accent;
+  }
+
+
 }
 
 
