@@ -1231,10 +1231,32 @@
     font-size: 14px;
     color: $accent;
   }
-
-
 }
 
+.terms {
+  &__inner {
+    padding: 120px 0 75px;
+  }
 
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
 
-@import 'media';
+  &__title {
+    font-size: 24px;
+    @extend %rubik-500;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  &__list {
+    padding-left: 20px;
+    list-style: auto;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
