@@ -1613,3 +1613,151 @@
 .partners-shop {
   padding-top: 75px;
 }
+
+.contact-info {
+  text-align: center;
+  padding: 120px 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 370px;
+    height: 380px;
+    background-color: $border;
+    align-items: center;
+    padding: 70px 15px;
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid $button;
+
+      .contact-info__icon {
+        background-color: $button;
+
+
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    padding-top: 15px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  &__contact {
+    font-size: 20px;
+    color: #222222;
+    @extend %dmsans-700;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    font-size: 16px;
+    @extend %rubik-400;
+    color: #565872;
+  }
+
+  &__mail,
+  &__phone,
+  &__address {
+    color: #565872;
+    max-width: 260px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__address {
+    max-width: 215px;
+  }
+}
+
+.contact {
+  padding-bottom: 85px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 620px;
+    width: 100%;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__input {
+    max-width: 300px;
+    width: 100%;
+    padding: 0 40px 0 20px;
+    height: 50px;
+
+    &--name {
+      background-image: url('../images/icons/user-contact.svg');
+      background-repeat: no-repeat;
+      background-position: 95% 50%;
+    }
+
+    &--mail {
+      background-image: url('../images/icons/mail-contact.svg');
+      background-repeat: no-repeat;
+      background-position: 95% 50%;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    background-color: #fafafa;
+    border: none;
+
+
+    &::placeholder {
+      text-transform: uppercase;
+      font-size: 16px;
+      @extend %rubik-400;
+    }
+  }
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    height: 175px;
+    margin-bottom: 30px;
+    padding: 15px 35px 15px 20px;
+    resize: none;
+    background-image: url('../images/icons/message-contact.svg');
+    background-repeat: no-repeat;
+    background-position: 97.5% 9%;
+  }
+
+  &__btn {
+    @extend %btn;
+    text-transform: uppercase;
+    width: 200px;
+    border-radius: 5px;
+  }
+}
+
+.map {
+  iframe {
+    max-width: 500px;
+    height: 335px;
+  }
+
+}
