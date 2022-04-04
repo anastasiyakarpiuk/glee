@@ -37,7 +37,6 @@
     @extend %rubik-500;
     font-size: 15px;
     transition: color 0.3s;
-
   }
 
 }
@@ -590,7 +589,9 @@
 
   &__photo {
     object-fit: none;
-    margin-bottom: 70px;
+    margin-bottom: 47px;
+    height: 230px;
+
   }
 
   &__links {
@@ -1529,11 +1530,6 @@
     margin-bottom: 5px;
   }
 
-  &__star {
-    margin-bottom: 25px;
-
-  }
-
   &__price {
     font-size: 30px;
     margin-bottom: 15px;
@@ -1566,6 +1562,10 @@
       }
     }
   }
+}
+
+.star-big {
+  margin-bottom: 25px;
 }
 
 .pagination {
@@ -1759,5 +1759,258 @@
     max-width: 500px;
     height: 335px;
   }
+}
 
+.product {
+  padding: 120px 0;
+}
+
+.product-item {
+  margin-bottom: 60px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slide {
+    display: flex;
+    max-width: 550px;
+    width: 100%;
+    margin-right: 60px;
+  }
+
+  .shop-product {
+    &__box {
+      padding: 0;
+    }
+
+    &__btn {
+      @extend %btn;
+      text-transform: uppercase;
+      border-radius: 5px;
+      @extend %rubik-400;
+    }
+
+    &__number {
+      margin-bottom: 55px;
+    }
+
+    &__num {
+      margin-right: 15px;
+    }
+  }
+
+  &__item-info {
+    display: flex;
+  }
+
+  &__name {
+    margin-right: 5px;
+  }
+
+  &__text {
+    color: $default
+  }
+}
+
+.product-slide {
+  &__thumb {
+    width: 134px;
+    margin-right: 25px;
+  }
+
+  &__thumb-item {
+    width: 134px;
+    min-height: 156px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    img {
+      width: 134px;
+      height: 156px;
+      object-fit: cover;
+    }
+  }
+
+  &__big {
+    width: 387px;
+  }
+
+  &__big-item {
+    width: 387px;
+    border: 2px solid $border;
+
+    img {
+      width: 387px;
+      height: 540px;
+      object-fit: none;
+    }
+  }
+}
+
+.jq-number {
+  padding: 0;
+  position: relative;
+}
+
+.jq-number__field {
+  width: 148px;
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid $button;
+
+}
+
+.jq-number__field input {
+  width: 100%;
+  padding: 12px 9px;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  @extend %rubik-400;
+  text-align: center;
+  border: none;
+}
+
+
+.jq-number__spin {
+  outline: none;
+  width: 50px;
+  height: 53px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+}
+
+.jq-number__spin:after,
+.jq-number__spin:before {
+  content: '';
+  position: absolute;
+}
+
+.jq-number__spin.minus {
+  left: 0;
+  border-right: 1px solid $button;
+}
+
+
+.jq-number__spin.minus:after {
+  top: 28px;
+  left: 20px;
+  width: 5px;
+  height: 1px;
+  background-color: #333333;
+}
+
+.jq-number__spin.plus {
+  right: 0;
+  border-left: 1px solid $button;
+}
+
+.jq-number__spin.plus:after {
+  top: 28px;
+  left: 20px;
+  width: 9px;
+  height: 1px;
+  background-color: #333333;
+}
+
+.jq-number__spin.plus:before {
+  top: 25px;
+  left: 24px;
+  width: 1px;
+  height: 8px;
+  background-color: #333333;
+}
+
+.product-tabs {
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: inline-block;
+    max-width: 241px;
+    width: 100%;
+    padding: 12px 5px;
+    border-radius: 5px;
+    background-color: #edf1f4;
+    color: $default;
+    @extend %rubik-500;
+    transition: color, background-color 0.5s;
+
+    &--active {
+      background-color: $button;
+      color: #fff;
+    }
+
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
+.related {
+  padding-bottom: 25px;
+
+  .products__items {
+    min-height: auto;
+  }
+
+  &__slider.products {
+    padding: 0;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  .slider-items {
+    display: block;
+
+    .slick-list {
+      padding: 40px 0;
+      margin-left: 20px;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      top: -60px;
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      border: 2px solid #edf1f4;
+      background: transparent;
+      transition: border-color 0.3s;
+
+      img {
+        display: inline-block;
+      }
+
+      &:hover {
+        border-color: $button;
+      }
+    }
+
+    .slick-next {
+      right: 0;
+    }
+
+    .slick-prev {
+      right: 4%;
+      margin-right: 20px;
+
+    }
+  }
 }
