@@ -2010,7 +2010,158 @@
     .slick-prev {
       right: 4%;
       margin-right: 20px;
+    }
+  }
+}
 
+.blog-page {
+  padding: 120px 0;
+  margin-bottom: 170px;
+
+  &__inner {
+    display: flex;
+    margin-bottom: 75px;
+  }
+
+  &__content {
+    max-width: 830px;
+    width: 100%;
+    margin-right: 70px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    .blog-box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $button;
+      width: 275px;
+      height: 70px;
+      border: none;
+      align-items: center;
+      padding: 0 20px;
+
+      &__data,
+      &__author {
+        color: #fff;
+      }
+
+      &__data.blog__data {
+        &::before {
+          background-image: url('../images/icons/calendar-white.svg');
+        }
+      }
+
+      &__author.blog__author {
+        &::before {
+          background-image: url('../images/icons/user-white.svg');
+        }
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 36px;
+    color: #333333;
+    @extend %rubik-400;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    color: $button;
+    border-radius: 0;
+    border-color: $button;
+    fill: $button;
+
+    svg+#arrow {
+      fill: inherit;
+    }
+
+  }
+
+  &__aside {
+    width: 270px;
+  }
+}
+
+
+
+.filter-search {
+  &__form {
+    display: flex;
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    width: 270px;
+    padding-right: 55px;
+    height: 43px;
+    border: 1px solid #edf1f4;
+    border-radius: 5px;
+    padding: 10px 55px 10px 10px;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    width: 48px;
+    height: 43px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #edf1f4;
+    cursor: pointer;
+    padding: 0 15px;
+  }
+}
+
+.recent-posts {
+  &__item {
+    display: flex;
+    height: 70px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    margin-right: 15px;
+  }
+
+  &__name {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #333333;
+  }
+
+  .blog-box {
+    border: none;
+    padding: 0;
+
+    &__data {
+      margin-right: 0;
     }
   }
 }
